@@ -1,0 +1,17 @@
+{
+    "name": "safet/mydomain",
+    "description": "A PHP for tracking expenses",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Safet"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/Framework/",
+            "App\\": "src/App/"
+        }
+    }
+}
