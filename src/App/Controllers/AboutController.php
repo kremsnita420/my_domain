@@ -8,7 +8,7 @@ use Framework\TemplateEngine;
 use App\Config\Paths;
 
 
-class HomeController
+class AboutController
 {
     private TemplateEngine $view;
     public function __construct()
@@ -16,12 +16,13 @@ class HomeController
         $this->view = new TemplateEngine(Paths::VIEW);
     }
 
-    public function home()
+    public function about()
     {
 
 
-        echo $this->view->render('index', [
-            'title' => 'Transaction List'
+        echo $this->view->render('about', [
+            'title' => 'About Page',
+            'dangerousString' => '<script>alert("XSS Attack!");</script>'
         ]);
     }
 }
